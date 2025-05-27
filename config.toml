@@ -1,0 +1,12 @@
+
+[server]
+runOnSave = true
+
+[theme]
+primaryColor="#0d6efd"           # A bright, vivid blue for primary elements - modern and energetic
+backgroundColor="#f8fafc"        # Very light grayish-blue for a soft and clean main background
+secondaryBackgroundColor="#ffffff" # Pure white for cards and containers to maintain contrast
+textColor="#212529"              # Dark charcoal for excellent readability without harsh black
+
+
+
