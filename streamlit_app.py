@@ -4,20 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+import plotly.graph_objects as go
+from streamlit_option_menu import option_menu
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LSTM, Conv1D, MaxPooling1D, Flatten, Dropout, TimeDistributed
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
-
-# Handle TensorFlow gracefully
-TENSORFLOW_AVAILABLE = False
-try:
-    import tensorflow as tf
-    from tensorflow.keras.models import Sequential
-    from tensorflow.keras.layers import Dense, LSTM, Conv1D, MaxPooling1D
-    TENSORFLOW_AVAILABLE = True
-except ImportError:
-    st.info("ℹ️ TensorFlow features are not available in this deployment.")
-
+from datetime import datetime
 
 
 # Enhanced UI Configuration
